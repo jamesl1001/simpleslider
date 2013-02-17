@@ -54,6 +54,10 @@
         }
     }
 
+    function goToFrame(n) {
+        ssCurrentFrame = n;
+    }
+
     // Always initialise first image as .current
     addCurrent(0);
 
@@ -71,5 +75,18 @@
         clearCurrent();
         updateCurrentFrame(1);
         addCurrent(ssCurrentFrame);
+    }
+
+    // Navigation dots click handlers
+    for(i = 0; i < ssFrames; i++) {
+        ssAllDots[i].addEventListener('click', clickDots, false);
+    }
+
+    function clickDots(e) {
+        var dotClicked = e.target.className;
+        var n = dotClicked.match(/\d/);
+        clearCurrent();
+        addCurrent(n[0]);
+        goToFrame(n[0]);
     }
 })();
