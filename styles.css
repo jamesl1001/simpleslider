@@ -46,18 +46,57 @@ body {
 	top: 0;
 }
 
-#ss__prev {
-	width: 50%;
-	height: 100%;
-	float: left;
-	cursor: pointer;
-}
-
+#ss__prev,
 #ss__next {
 	width: 50%;
 	height: 100%;
-	float: right;
+	position: relative;
+	overflow: hidden;
 	cursor: pointer;
+}
+#ss__prev {
+	float: left;
+}
+
+#ss__next {
+	float: right;
+}
+
+#ss__prevChev,
+#ss__nextChev {
+	width: 20px;
+	height: 30px;
+	background: #666 center no-repeat;
+	background: rgba(0,0,0,0.4) center no-repeat;
+	position: absolute;
+	top: 45%;
+	-webkit-transition: left .3s, right .3s;
+	-moz-transition: left .3s, right .3s;
+	-ms-transition: left .3s, right .3s;
+	-o-transition: left .3s, right .3s;
+	transition: left .3s, right .3s;
+}
+
+#ss__prevChev {
+	background-image: url(img/prev.png);
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	left: -20px;
+}
+
+#ss__nextChev {
+	background-image: url(img/next.png);
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	right: -20px;
+}
+
+#ss__prev:hover #ss__prevChev {
+	left: 0;
+}
+
+#ss__next:hover #ss__nextChev {
+	right: 0;
 }
 
 #ss__dots {
