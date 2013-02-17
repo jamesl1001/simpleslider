@@ -1,26 +1,26 @@
-/*
-NOTES:
-JSON file
-frame.length
-currentFrame
-current class for active frame
-remove all other current states
-css3 animation
-*/
-
 (function(){
     // Setup variables
-    var ss         = document.getElementById("simpleslider"),
-        ssWrapper  = document.getElementById("ss__wrapper"),
-        ssControls = document.getElementById("ss__controls"),
-        ssHeight   = 530;
+    var ss              = document.getElementById("simpleslider"),
+        ssWrapper       = document.getElementById("ss__wrapper"),
+        ssControls      = document.getElementById("ss__controls"),
+        ssImages        = ss.getElementsByTagName("img"),
+        ssFrames        = ssImages.length,
+        ssHeight        = 530,
+        ssCurrentFrame  = 0;
 
-    // Set dimensions
+    // Set outer dimensions
     ss.style.height = ssHeight + 25 + "px";
     ssWrapper.style.height = ssHeight + "px";
 
-    // Get images
-    var ssImages = ss.getElementsByTagName("img");
-
+    // Current class functions
     console.log(ssImages);
+    ssImages[0].className = "current";
+
+    function clearCurrent() {
+        for(i = 0; i < ssFrames; i++) {
+            ssImages[i].className = "";
+        }
+    }
+
+
 })();

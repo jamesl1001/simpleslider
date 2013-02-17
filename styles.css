@@ -24,6 +24,18 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-webkit-transition: opacity .3s;
+	-moz-transition: opacity .3s;
+	-ms-transition: opacity .3s;
+	-o-transition: opacity .3s;
+	transition: opacity .3s;
+}
+
+#ss__wrapper img.current {
+	opacity: 1;
+	filter: alpha(opacity=100);
 }
 
 #ss__controls {
