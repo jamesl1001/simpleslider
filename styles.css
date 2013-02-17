@@ -1,0 +1,53 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.centre {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#simpleslider {
+	width: 100%;
+}
+
+#ss__wrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+#ss__wrapper img {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#ss__controls {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+
+#ss__prev {
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+#ss__next {
+	width: 50%;
+	height: 100%;
+	float: right;
+}
+
+#ss__dots {
+	width: 100%;
+	height: 25px;
+	position: absolute;
+	bottom: -25px;
+}
