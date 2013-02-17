@@ -5,23 +5,38 @@
         ssControls      = document.getElementById("ss__controls"),
         ssPrev          = document.getElementById("ss__prev"),
         ssNext          = document.getElementById("ss__next"),
+        ssDots          = document.getElementById("ss__dots"),
         ssImages        = ss.getElementsByTagName("img"),
         ssFrames        = ssImages.length,
         ssHeight        = 530,
-        ssCurrentFrame  = 0;
+        ssCurrentFrame  = 0,
+        ssDotsWidth     = (ssFrames * 5) + ((ssFrames - 1) * 10);
 
-    // Set outer dimensions
+    // Set dimensions
     ss.style.height = ssHeight + 25 + "px";
     ssWrapper.style.height = ssHeight + "px";
+    ssControls.style.height = ssHeight + "px";
+    ssDots.style.width = ssDotsWidth + "px";
+
+    // Generate navigation dots
+    for(i = 0; i < ssFrames; i++) {
+        var ssDot = document.createElement("div");
+        ssDot.className = "ss__dot" + " ss__frame" + [i];
+        ssDots.appendChild(ssDot);
+    }
+
+    ssAllDots = ssDots.getElementsByTagName("div");
 
     // Current class functions
     function addCurrent(n) {
         ssImages[n].className = "current";
+        ssAllDots[n].className += " current";
     }
 
     function clearCurrent() {
         for(i = 0; i < ssFrames; i++) {
             ssImages[i].className = "";
+            ssAllDots[i].className = ssAllDots[i].className.replace(/ current/, "");
         }
     }
 
@@ -37,8 +52,6 @@
         } else if(ssCurrentFrame < 0) {
             ssCurrentFrame = ssFrames - 1;
         }
-
-        console.log(ssCurrentFrame);
     }
 
     // Always initialise first image as .current
