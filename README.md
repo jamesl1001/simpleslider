@@ -18,7 +18,7 @@ Anyone is free to use and modify it as they wish, however I would love to know i
 How to use
 ----------
 
-1. Set up your markup
+1. Set up your markup:
 ```html
 	<div id="simpleslider">
 		<div id="ss__wrapper">
@@ -32,18 +32,23 @@ How to use
 	</div>
 ```
 
-2. Link to ```styles.css``` in the ```<head>``` tag
+2. Link to ```styles.css``` in the ```<head>``` tag:
 ```html
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 ```
 
-3. Include ```simpleslider.js``` just before the ```</body>``` tag
+3. Include ```simpleslider.js``` just before the ```</body>``` tag:
 ```html
     <script src="simpleslider.js"></script>
 ```
 
-4. Set up the width. SimpleSlider uses the width of the parent container of ```#simpleslider``` for its width. In this example, I use ```.center { width: 1000px; };```.
+4. Add your images! Any ```<img>``` tags you add within ```<div id="ss__wrapper">``` will become part of the slideshow.
 
-5. Set up the height. The height is set in pixels in a variable called ```ssHeight``` in ```simpleslider.js```.
+5. Set up the width. SimpleSlider uses the width of the parent container of ```#simpleslider``` for its width. In this example, I use ```.center { width: 1000px; };```.
 
-6. Add your images! Any ```<img>``` tags you add within ```<div id="ss__wrapper">``` will become part of the slideshow.
+6. Initiate SimpleSlider and pass through the height as the parameter:
+```html
+	<script>
+		simpleslider(530);
+	</script>
+```

@@ -1,4 +1,4 @@
-(function(){
+function simpleslider(ssH) {
     // Setup variables
     var ss              = document.getElementById("simpleslider"),
         ssWrapper       = document.getElementById("ss__wrapper"),
@@ -8,7 +8,7 @@
         ssDots          = document.getElementById("ss__dots"),
         ssImages        = ssWrapper.getElementsByTagName("img"),
         ssFrames        = ssImages.length,
-        ssHeight        = 530,
+        ssHeight        = ssH,
         ssCurrentFrame  = 0,
         ssDotsWidth     = (ssFrames * 5) + ((ssFrames - 1) * 10);
 
@@ -89,4 +89,4 @@
         addCurrent(n[0]);
         goToFrame(n[0]);
     }
-})();
+};
