@@ -6,7 +6,7 @@
         ssPrev          = document.getElementById("ss__prev"),
         ssNext          = document.getElementById("ss__next"),
         ssDots          = document.getElementById("ss__dots"),
-        ssImages        = ss.getElementsByTagName("img"),
+        ssImages        = ssWrapper.getElementsByTagName("img"),
         ssFrames        = ssImages.length,
         ssHeight        = 530,
         ssCurrentFrame  = 0,
