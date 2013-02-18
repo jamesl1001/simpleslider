@@ -1,3 +1,8 @@
+/*
+  SimpleSlider by JaL Productions
+  http://jalproductions.co.uk/
+*/
+
 function simpleslider(ssH) {
     // Setup variables
     var ss              = document.getElementById("simpleslider"),
