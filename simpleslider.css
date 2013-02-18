@@ -1,13 +1,3 @@
-body {
-	margin: 0;
-	padding: 0;
-}
-
-.centre {
-	width: 1000px;
-	margin: 0 auto;
-}
-
 #simpleslider {
 	width: 100%;
 	position: relative;
