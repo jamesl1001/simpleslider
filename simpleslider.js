@@ -32,12 +32,13 @@ function simpleslider(ssH) {
 
     ssAllDots = ssDots.getElementsByTagName("div");
 
-    // Current class functions
+    // Add current class to frame
     function addCurrent(n) {
         ssImages[n].className = "current";
         ssAllDots[n].className += " current";
     }
 
+    // Clear all current classes
     function clearCurrent() {
         for(i = 0; i < ssFrames; i++) {
             ssImages[i].className = "";
@@ -45,22 +46,15 @@ function simpleslider(ssH) {
         }
     }
 
-    function updateCurrentFrame(direction) {
-        if(direction) {
-            ssCurrentFrame++;
-        } else {
-            ssCurrentFrame--;
-        }
-
-        if(ssCurrentFrame >= ssFrames) {
-            ssCurrentFrame = 0;
-        } else if(ssCurrentFrame < 0) {
-            ssCurrentFrame = ssFrames - 1;
-        }
-    }
-
+    // Update current frame
     function goToFrame(n) {
-        ssCurrentFrame = n;
+        if(n >= ssFrames) {
+            ssCurrentFrame = 0;
+        } else if(n < 0) {
+            ssCurrentFrame = ssFrames - 1;
+        } else {
+            ssCurrentFrame = n;
+        }
     }
 
     // Always initialise first image as .current
@@ -72,13 +66,13 @@ function simpleslider(ssH) {
 
     function clickPrev() {
         clearCurrent();
-        updateCurrentFrame(0);
+        goToFrame(ssCurrentFrame - 1);
         addCurrent(ssCurrentFrame);
     }
 
     function clickNext() {
         clearCurrent();
-        updateCurrentFrame(1);
+        goToFrame(ssCurrentFrame + 1);
         addCurrent(ssCurrentFrame);
     }
 
@@ -91,7 +85,7 @@ function simpleslider(ssH) {
         var dotClicked = e.target.className;
         var n = dotClicked.match(/\d/);
         clearCurrent();
-        addCurrent(n[0]);
         goToFrame(n[0]);
+        addCurrent(n[0]);
     }
 };
