@@ -32,9 +32,9 @@ How to use
 	</div>
 ```
 
-2. Link to ```styles.css``` in the ```<head>``` tag:
+2. Link to ```simpleslider.css``` in the ```<head>``` tag:
 ```html
-	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<link rel="stylesheet" type="text/css" href="simpleslider.css" />
 ```
 
 3. Include ```simpleslider.js``` just before the ```</body>``` tag:
