@@ -1,19 +1,30 @@
-SimpleSlider v0.3
+SimpleSlider v0.4
 =================
 http://jalproductions.co.uk/projects/simpleslider/
 
 A vanilla Javascript and CSS3 slider.
+
 
 About
 -----
 
 SimpleSlider is a slideshow script written using pure Javascript (no libraries).
 
-All animations are done using CSS3, which means to see the beautiful fades and slides you'll have to be using a modern browser, but it will still fall back to appearing and disappearing for older browsers (not IE yet).
+All animations are done using CSS3, which means to see the beautiful fades and slides you'll have to be using a modern browser, but it will still gracefully degrade for older browsers.
 
 The project is open source; I accept suggested change requests.
 
 Anyone is free to use and modify it as they wish, however I would love to know if you do use it; contact me through my website.
+
+
+Browser support
+---------------
+
+- Chrome 24
+- Firefox 18
+- Safari 5.1.7
+- IE7+
+
 
 How to use
 ----------
@@ -22,7 +33,7 @@ How to use
 ```html
 	<div id="simpleslider">
 		<div id="ss__wrapper">
-			
+
 		</div>
 		<div id="ss__controls">
 			<div id="ss__prev"><div id="ss__prevChev"></div></div>
