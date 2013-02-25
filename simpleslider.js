@@ -15,7 +15,12 @@ function simpleslider(ssH) {
         ssFrames        = ssImages.length,
         ssHeight        = ssH,
         ssCurrentFrame  = 0,
+        ssDotsWidth     = 0;
+    if(window.addEventListener) {
         ssDotsWidth     = (ssFrames * 5) + ((ssFrames - 1) * 10);
+    } else if(window.attachEvent) {
+        ssDotsWidth     = (ssFrames * 5) + ((ssFrames - 1) * 10) + 15;
+    }
 
     // Set dimensions
     ss.style.height = ssHeight + 25 + "px";
@@ -61,8 +66,13 @@ function simpleslider(ssH) {
     addCurrent(0);
 
     // Next and Previous click handlers
-    ssPrev.addEventListener('click', clickPrev, false);
-    ssNext.addEventListener('click', clickNext, false);
+    if(window.addEventListener) {
+        ssPrev.addEventListener('click', clickPrev, false);
+        ssNext.addEventListener('click', clickNext, false);
+    } else if(window.attachEvent) {
+        ssPrev.attachEvent('onclick', clickPrev);
+        ssNext.attachEvent('onclick', clickNext);
+    }
 
     function clickPrev() {
         clearCurrent();
@@ -78,11 +88,19 @@ function simpleslider(ssH) {
 
     // Navigation dots click handlers
     for(i = 0; i < ssFrames; i++) {
-        ssAllDots[i].addEventListener('click', clickDots, false);
+        if(window.addEventListener) {
+            ssAllDots[i].addEventListener('click', clickDots, false);
+        } else if(window.attachEvent) {
+            ssAllDots[i].attachEvent('onclick', clickDots);
+        }
     }
 
     function clickDots(e) {
-        var dotClicked = e.target.className;
+        if(e.target) {
+            var dotClicked = e.target.className;
+        } else if(e.srcElement) {
+            var dotClicked = e.srcElement.className;
+        }
         var n = dotClicked.match(/\d/);
         clearCurrent();
         goToFrame(n[0]);
