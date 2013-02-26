@@ -29,7 +29,7 @@ function simpleslider(ssH) {
     ssDots.style.width = ssDotsWidth + "px";
 
     // Generate navigation dots
-    for(i = 0; i < ssFrames; i++) {
+    for(var i = 0; i < ssFrames; i++) {
         var ssDot = document.createElement("div");
         ssDot.className = "ss__dot" + " ss__frame" + [i];
         ssDots.appendChild(ssDot);
@@ -45,7 +45,7 @@ function simpleslider(ssH) {
 
     // Clear all current classes
     function clearCurrent() {
-        for(i = 0; i < ssFrames; i++) {
+        for(var i = 0; i < ssFrames; i++) {
             ssImages[i].className = "";
             ssAllDots[i].className = ssAllDots[i].className.replace(/ current/, "");
         }
@@ -87,7 +87,7 @@ function simpleslider(ssH) {
     }
 
     // Navigation dots click handlers
-    for(i = 0; i < ssFrames; i++) {
+    for(var i = 0; i < ssFrames; i++) {
         if(window.addEventListener) {
             ssAllDots[i].addEventListener('click', clickDots, false);
         } else if(window.attachEvent) {
@@ -106,4 +106,4 @@ function simpleslider(ssH) {
         goToFrame(n[0]);
         addCurrent(n[0]);
     }
-};
+}
