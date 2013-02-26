@@ -1,6 +1,7 @@
 /*
   SimpleSlider by JaL Productions
   http://jalproductions.co.uk/
+  https://github.com/jamesl1001/simpleslider
 */
 
 function simpleslider(ssH) {
