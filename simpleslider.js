@@ -1,10 +1,10 @@
 /*
-  SimpleSlider by JaL Productions
+  SimpleSlider v0.5 by JaL Productions
   http://jalproductions.co.uk/
   https://github.com/jamesl1001/simpleslider
 */
 
-function simpleslider(ssH) {
+function simpleslider(ssH, ssF, ssD, ssP) {
     // Setup variables
     var ss              = document.getElementById("simpleslider"),
         ssWrapper       = document.getElementById("ss__wrapper"),
@@ -13,10 +13,22 @@ function simpleslider(ssH) {
         ssNext          = document.getElementById("ss__next"),
         ssDots          = document.getElementById("ss__dots"),
         ssImages        = ssWrapper.getElementsByTagName("img"),
-        ssFrames        = ssImages.length,
+        ssFrames        = ssF || ssImages.length,
         ssHeight        = ssH,
+        ssDirectory     = ssD,
+        ssPrefix        = ssP,
         ssCurrentFrame  = 0,
         ssDotsWidth     = 0;
+
+    // Create img elements if they don't already exist on the DOM
+    if(ssImages.length == 0) {
+        for(var i = 1; i <= ssFrames; i++) {
+            var ssImg = document.createElement("img");
+            ssImg.src = ssD + "/" + ssP + i + ".jpg";    // "img/directory/prefix1.jpg"
+            ssWrapper.innerHTML += ssImg.outerHTML;
+        }
+    }
+
     if(window.addEventListener) {
         ssDotsWidth     = (ssFrames * 5) + ((ssFrames - 1) * 10);
     } else if(window.attachEvent) {
