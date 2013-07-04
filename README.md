@@ -1,6 +1,6 @@
 SimpleSlider v0.5
 =================
-http://jalproductions.co.uk/projects/simpleslider/
+http://jalproductions.co.uk/projects/SimpleSlider/
 
 A vanilla Javascript and CSS3 slider.
 
