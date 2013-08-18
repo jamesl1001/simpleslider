@@ -14,6 +14,7 @@
 	height: 100%;
 	position: relative;
 	overflow: hidden;
+	z-index: 1;
 }
 
 #ss__wrapper img {
@@ -44,12 +45,13 @@
 
 #ss__prev,
 #ss__next {
-	width: 50%;
+	width: 33%;
 	height: 100%;
 	background: url(img/transparent.gif);
 	background: rgba(0,0,0,0);
 	position: relative;
 	overflow: hidden;
+	z-index: 2;
 	cursor: pointer;
 }
 #ss__prev {
