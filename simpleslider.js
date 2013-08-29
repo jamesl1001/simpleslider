@@ -1,5 +1,5 @@
 /*
-  SimpleSlider v0.5 by JaL Productions
+  SimpleSlider v0.6 by JaL Productions
   http://jalproductions.co.uk/
   https://github.com/jamesl1001/simpleslider
 */
@@ -119,4 +119,16 @@ function simpleslider(ssH, ssF, ssD, ssP) {
         goToFrame(n[0]);
         addCurrent(n[0]);
     }
+
+    document.onkeydown = function(e) {
+        evt = e || window.event;
+        switch(evt.keyCode) {
+            case 37:
+                clickPrev();
+                break;
+            case 39:
+                clickNext();
+                break;
+        }
+    };
 }
