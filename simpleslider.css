@@ -27,7 +27,6 @@
 	filter: alpha(opacity=0);
 	-webkit-transition: opacity .3s;
 	-moz-transition: opacity .3s;
-	-ms-transition: opacity .3s;
 	-o-transition: opacity .3s;
 	transition: opacity .3s;
 }
@@ -73,7 +72,6 @@
 	top: 45%;
 	-webkit-transition: left .3s, right .3s;
 	-moz-transition: left .3s, right .3s;
-	-ms-transition: left .3s, right .3s;
 	-o-transition: left .3s, right .3s;
 	transition: left .3s, right .3s;
 }
@@ -117,7 +115,6 @@
 	cursor: pointer;
 	-webkit-transition: background .3s;
 	-moz-transition: background .3s;
-	-ms-transition: background .3s;
 	-o-transition: background .3s;
 	transition: background .3s;
 }
