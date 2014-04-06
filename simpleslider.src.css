@@ -65,12 +65,9 @@
     width: 20px;
     height: 30px;
     background: #666 center no-repeat;
-    background: rgba(0,0,0,0.4) center no-repeat;
+    background: rgba(0,0,0,.4) center no-repeat;
     position: absolute;
     top: 45%;
-    -webkit-transition: left .3s, right .3s;
-    -moz-transition: left .3s, right .3s;
-    -o-transition: left .3s, right .3s;
     transition: left .3s, right .3s;
 }
 
@@ -111,9 +108,6 @@
     margin-right: 10px;
     float: left;
     cursor: pointer;
-    -webkit-transition: background .3s;
-    -moz-transition: background .3s;
-    -o-transition: background .3s;
     transition: background .3s;
 }
 
