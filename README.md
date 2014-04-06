@@ -33,11 +33,11 @@ How to use
 
 **If you are comfortable adding images in HTML, you can use this method:**
 
-1. Set up your markup and add your images! Any `<img>` tags you add within `<div id="ss__wrapper">` will become part of the slider.
+1 - Set up your markup and add your images! Any `<img>` tags you add within `<div id="ss__wrapper">` will become part of the slider.
 ```html
 	<div id="simpleslider">
 		<div id="ss__wrapper">
-			<img src="img/image1.jpg" alt="A orange image" class="current"/>
+			<img src="img/image1.jpg" alt="An orange image" class="current"/>
 			<img src="img/image2.jpg" alt="A larger image with a different proportion to ss" />
 			<img src="img/image3.jpg" alt="A portrait image" />
 		</div>
@@ -49,19 +49,19 @@ How to use
 	</div>
 ```
 
-2. Link to `simpleslider.css` in the `<head>` tag:
+2 - Link to `simpleslider.css` in the `<head>` tag:
 ```html
 	<link rel="stylesheet" type="text/css" href="simpleslider.css" />
 ```
 
-3. Include `simpleslider.js` just before the `</body>` tag:
+3 - Include `simpleslider.js` just before the `</body>` tag:
 ```html
     <script src="simpleslider.js"></script>
 ```
 
-4. Set up the width. SimpleSlider uses the width of the parent container of `#simpleslider` for its width. In this example, I use `.center { width: 1000px; };`.
+4 - Set up the width. SimpleSlider uses the width of the parent container of `#simpleslider` for its width. In this example, I use `.center { width: 1000px; };`.
 
-5. Initiate SimpleSlider and pass through the height as the parameter:
+5 - Initiate SimpleSlider and pass through the height as the parameter:
 ```html
 	<script>
 		simpleslider(530);
@@ -70,7 +70,7 @@ How to use
 
 **SimpleSlider can also load a set number of images from a specified directory, without having to specify them in the HTML:**
 
-1. Set up your markup, the time leaving the `ss__wrapper` container empty:
+1 - Set up your markup, the time leaving the `ss__wrapper` container empty:
 ```html
 	<div id="simpleslider">
 		<div id="ss__wrapper"></div>
@@ -82,19 +82,19 @@ How to use
 	</div>
 ```
 
-2. Link to `simpleslider.css` in the `<head>` tag:
+2 - Link to `simpleslider.css` in the `<head>` tag:
 ```html
 	<link rel="stylesheet" type="text/css" href="simpleslider.css" />
 ```
 
-3. Include `simpleslider.js` just before the `</body>` tag:
+3 - Include `simpleslider.js` just before the `</body>` tag:
 ```html
     <script src="simpleslider.js"></script>
 ```
 
-4. Set up the width. SimpleSlider uses the width of the parent container of `#simpleslider` for its width. In this example, I use `.center { width: 1000px; };`.
+4 - Set up the width. SimpleSlider uses the width of the parent container of `#simpleslider` for its width. In this example, I use `.center { width: 1000px; };`.
 
-5. Initiate SimpleSlider. Pass SimpleSlider the *height*, *how many images* to load, the *directory* in which they belong and the filename prefix:
+5 - Initiate SimpleSlider. Pass SimpleSlider the *height*, *how many images* to load, the *directory* in which they belong and the filename prefix:
 ```html
 	<script>
 		simpleslider(530, 3, "img/directory", "prefix");
