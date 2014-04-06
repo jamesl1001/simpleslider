@@ -1,5 +1,5 @@
 /*
-  SimpleSlider v0.5 by JaL Productions
+  SimpleSlider v0.7 by JaL Productions
   http://jalproductions.co.uk/
   https://github.com/jamesl1001/simpleslider
 */
@@ -30,15 +30,13 @@ function simpleslider(ssH, ssF, ssD, ssP) {
     }
 
     if(window.addEventListener) {
-        ssDotsWidth     = (ssFrames * 5) + ((ssFrames - 1) * 10);
+        ssDotsWidth = (ssFrames * 5) + ((ssFrames - 1) * 10);
     } else if(window.attachEvent) {
-        ssDotsWidth     = (ssFrames * 5) + ((ssFrames - 1) * 10) + 15;
+        ssDotsWidth = (ssFrames * 5) + ((ssFrames - 1) * 10) + 15;
     }
 
     // Set dimensions
-    ss.style.height = ssHeight + 25 + "px";
-    ssWrapper.style.height = ssHeight + "px";
-    ssControls.style.height = ssHeight + "px";
+    ss.style.height = ssHeight + "px";
     ssDots.style.width = ssDotsWidth + "px";
 
     // Generate navigation dots
@@ -119,4 +117,16 @@ function simpleslider(ssH, ssF, ssD, ssP) {
         goToFrame(n[0]);
         addCurrent(n[0]);
     }
+
+    document.onkeydown = function(e) {
+        evt = e || window.event;
+        switch(evt.keyCode) {
+            case 37:
+                clickPrev();
+                break;
+            case 39:
+                clickNext();
+                break;
+        }
+    };
 }
