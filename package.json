@@ -1,0 +1,26 @@
+{
+  "name": "SimpleSlider",
+  "version": "0.7.0",
+  "description": "A vanilla Javascript and CSS3 slider.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jamesl1001/simpleslider.git"
+  },
+  "author": "JaL Productions",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/jamesl1001/simpleslider/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-sass": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-autoprefixer": "~0.7.2",
+    "grunt-contrib-cssmin": "~0.6.1"
+  }
+}

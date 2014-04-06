@@ -25,7 +25,6 @@
     left: 0;
     opacity: 0;
     filter: alpha(opacity=0);
-    -webkit-transition: opacity .3s;
     transition: opacity .3s;
 }
 
@@ -70,6 +69,8 @@
     position: absolute;
     top: 45%;
     -webkit-transition: left .3s, right .3s;
+    -moz-transition: left .3s, right .3s;
+    -o-transition: left .3s, right .3s;
     transition: left .3s, right .3s;
 }
 
@@ -111,6 +112,8 @@
     float: left;
     cursor: pointer;
     -webkit-transition: background .3s;
+    -moz-transition: background .3s;
+    -o-transition: background .3s;
     transition: background .3s;
 }
 
