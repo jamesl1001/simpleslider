@@ -1,4 +1,4 @@
-SimpleSlider v0.7
+SimpleSlider v0.8
 =================
 http://jalproductions.co.uk/projects/SimpleSlider/
 
@@ -8,9 +8,9 @@ A vanilla Javascript and CSS3 slider.
 About
 -----
 
-SimpleSlider is a slideshow script written using pure Javascript (no libraries).
+SimpleSlider is a responsive slider script written using pure Javascript (no libraries).
 
-All animations are done using CSS3, which means to see the beautiful fades and slides you'll have to be using a modern browser, but it will still gracefully degrade for older browsers.
+All animations are done using CSS3, which means to see the beautiful transitions you'll have to be using a modern browser, but it will still gracefully degrade for older browsers.
 
 The project is open source; I accept suggested change requests.
 
@@ -25,7 +25,7 @@ Browser support
 - Chrome 24
 - Firefox 18
 - Safari 5.1.7
-- IE7+
+- IE8+
 
 
 How to use
@@ -59,12 +59,12 @@ How to use
     <script src="simpleslider.js"></script>
 ```
 
-4 - Set up the width. SimpleSlider uses the width of the parent container of `#simpleslider` for its width. In this example, I use `.center { width: 1000px; };`.
+4 - SimpleSlider's dimensions are set using a width:height ratio. The width will always be 100% of its parent container.
 
-5 - Initiate SimpleSlider and pass through the height as the parameter:
+5 - Initiate SimpleSlider and pass through the width:height ratio as the parameter:
 ```html
 	<script>
-		simpleslider(530);
+		simpleslider('16:9');
 	</script>
 ```
 
@@ -92,11 +92,11 @@ How to use
     <script src="simpleslider.js"></script>
 ```
 
-4 - Set up the width. SimpleSlider uses the width of the parent container of `#simpleslider` for its width. In this example, I use `.center { width: 1000px; };`.
+4 - SimpleSlider's dimensions are set using a width:height ratio. The width will always be 100% of its parent container.
 
-5 - Initiate SimpleSlider. Pass SimpleSlider the *height*, *how many images* to load, the *directory* in which they belong and the filename prefix:
+5 - Initiate SimpleSlider. Pass SimpleSlider the *width:height ratio*, *how many images* to load, the *directory* in which they belong and the filename prefix:
 ```html
 	<script>
-		simpleslider(530, 3, "img/directory", "prefix");
+		simpleslider('16:9', 3, "img/directory", "prefix");
 	</script>
 ```

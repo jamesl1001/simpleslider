@@ -10,17 +10,17 @@ module.exports = function(grunt) {
         },
         cssmin: {
             minify: {
-                src: 'css/styles.css',
-                dest: 'build/simpleslider.min.css'
+                src: 'simpleslider.css',
+                dest: 'simpleslider.min.css'
             }
         },
         uglify: {
             build: {
                 files: [{
                     expand: true,
-                    cwd: 'js',
+                    cwd: '.',
                     src: 'simpleslider.js',
-                    dest: 'build',
+                    dest: '.',
                     ext: '.min.js'
                 }]
             }

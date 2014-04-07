@@ -1,5 +1,5 @@
 /*
-  SimpleSlider v0.7 by JaL Productions
+  SimpleSlider v0.8 by JaL Productions
   http://jalproductions.co.uk/
   https://github.com/jamesl1001/simpleslider
 */
