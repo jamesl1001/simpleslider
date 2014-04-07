@@ -106,7 +106,7 @@
     width: 5px;
     height: 5px;
     background: #CCC;
-    margin-right: 10px;
+    margin: 0 5px;
     float: left;
     cursor: pointer;
     transition: background .3s;
@@ -122,8 +122,4 @@
 
 .ss__dot.current:hover {
     background: #666;
-}
-
-.ss__dot:last-child {
-    margin-right: 0;
 }

@@ -29,11 +29,7 @@ function simpleslider(ssR, ssF, ssD, ssP) {
         }
     }
 
-    if(window.addEventListener) {
-        ssDotsWidth = (ssFrames * 5) + ((ssFrames - 1) * 10);
-    } else if(window.attachEvent) {
-        ssDotsWidth = (ssFrames * 5) + ((ssFrames - 1) * 10) + 15;
-    }
+    ssDotsWidth = ssFrames * 15;
 
     // Calculate aspect ratio
     var ssRatioSplit      = ssRatio.split(':');
