@@ -6,13 +6,13 @@
 
 function simpleslider(ssR, ssF, ssD, ssP) {
     // Setup variables
-    var ss              = document.getElementById("simpleslider"),
-        ssWrapper       = document.getElementById("ss__wrapper"),
-        ssControls      = document.getElementById("ss__controls"),
-        ssPrev          = document.getElementById("ss__prev"),
-        ssNext          = document.getElementById("ss__next"),
-        ssDots          = document.getElementById("ss__dots"),
-        ssImages        = ssWrapper.getElementsByTagName("img"),
+    var ss              = document.getElementById('simpleslider'),
+        ssWrapper       = document.getElementById('ss__wrapper'),
+        ssControls      = document.getElementById('ss__controls'),
+        ssPrev          = document.getElementById('ss__prev'),
+        ssNext          = document.getElementById('ss__next'),
+        ssDots          = document.getElementById('ss__dots'),
+        ssImages        = ssWrapper.getElementsByTagName('img'),
         ssFrames        = ssF || ssImages.length,
         ssRatio         = ssR,
         ssDirectory     = ssD,
@@ -23,8 +23,8 @@ function simpleslider(ssR, ssF, ssD, ssP) {
     // Create img elements if they don't already exist on the DOM
     if(ssImages.length == 0) {
         for(var i = 1; i <= ssFrames; i++) {
-            var ssImg = document.createElement("img");
-            ssImg.src = ssD + "/" + ssP + i + ".jpg";    // "img/directory/prefix1.jpg"
+            var ssImg = document.createElement('img');
+            ssImg.src = ssD + '/' + ssP + i + '.jpg';    // 'img/directory/prefix1.jpg'
             ssWrapper.innerHTML += ssImg.outerHTML;
         }
     }
@@ -36,29 +36,29 @@ function simpleslider(ssR, ssF, ssD, ssP) {
     var ssRatioPercentage = ssRatioSplit[1] / ssRatioSplit[0] * 100;
 
     // Set dimensions
-    ss.style.paddingBottom = ssWrapper.style.paddingBottom = ssRatioPercentage + "%";
-    ssDots.style.width = ssDotsWidth + "px";
+    ss.style.paddingBottom = ssWrapper.style.paddingBottom = ssRatioPercentage + '%';
+    ssDots.style.width     = ssDotsWidth + 'px';
 
     // Generate navigation dots
     for(var i = 0; i < ssFrames; i++) {
-        var ssDot = document.createElement("div");
-        ssDot.className = "ss__dot" + " ss__frame" + [i];
+        var ssDot = document.createElement('div');
+        ssDot.className = 'ss__dot' + ' ss__frame' + [i];
         ssDots.appendChild(ssDot);
     }
 
-    ssAllDots = ssDots.getElementsByTagName("div");
+    ssAllDots = ssDots.getElementsByTagName('div');
 
     // Add current class to frame
     function addCurrent(n) {
-        ssImages[n].className = "current";
-        ssAllDots[n].className += " current";
+        ssImages[n].className = 'current';
+        ssAllDots[n].className += ' current';
     }
 
     // Clear all current classes
     function clearCurrent() {
         for(var i = 0; i < ssFrames; i++) {
-            ssImages[i].className = "";
-            ssAllDots[i].className = ssAllDots[i].className.replace(/ current/, "");
+            ssImages[i].className = '';
+            ssAllDots[i].className = ssAllDots[i].className.replace(/ current/, '');
         }
     }
 
