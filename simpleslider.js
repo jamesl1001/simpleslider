@@ -4,7 +4,7 @@
   https://github.com/jamesl1001/simpleslider
 */
 
-function simpleslider(ssH, ssF, ssD, ssP) {
+function simpleslider(ssR, ssF, ssD, ssP) {
     // Setup variables
     var ss              = document.getElementById("simpleslider"),
         ssWrapper       = document.getElementById("ss__wrapper"),
@@ -14,7 +14,7 @@ function simpleslider(ssH, ssF, ssD, ssP) {
         ssDots          = document.getElementById("ss__dots"),
         ssImages        = ssWrapper.getElementsByTagName("img"),
         ssFrames        = ssF || ssImages.length,
-        ssHeight        = ssH,
+        ssRatio         = ssR,
         ssDirectory     = ssD,
         ssPrefix        = ssP,
         ssCurrentFrame  = 0,
@@ -35,8 +35,12 @@ function simpleslider(ssH, ssF, ssD, ssP) {
         ssDotsWidth = (ssFrames * 5) + ((ssFrames - 1) * 10) + 15;
     }
 
+    // Calculate aspect ratio
+    var ssRatioSplit      = ssRatio.split(':');
+    var ssRatioPercentage = ssRatioSplit[1] / ssRatioSplit[0] * 100;
+
     // Set dimensions
-    ss.style.height = ssHeight + "px";
+    ss.style.paddingBottom = ssWrapper.style.paddingBottom = ssRatioPercentage + "%";
     ssDots.style.width = ssDotsWidth + "px";
 
     // Generate navigation dots
