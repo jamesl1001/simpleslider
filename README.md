@@ -25,7 +25,7 @@ Browser support
 - Chrome 24
 - Firefox 18
 - Safari 5.1.7
-- IE8+
+- IE7+
 
 
 How to use
