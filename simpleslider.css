@@ -32,6 +32,7 @@
 #ss__wrapper img.current {
     filter: alpha(opacity=100);
     opacity: 1;
+    z-index: 1;
 }
 
 .full-width {
