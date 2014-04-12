@@ -10,6 +10,8 @@ About
 
 SimpleSlider is a responsive slider script written using pure Javascript (no libraries).
 
+The images will scale to completely fill the wrapper leaving no whitespace, similar to `background-size:cover`
+
 All animations are done using CSS3, which means to see the beautiful transitions you'll have to be using a modern browser, but it will still gracefully degrade for older browsers.
 
 The project is open source; I accept suggested change requests.
@@ -22,8 +24,9 @@ Anyone is free to use and modify it as they wish, however I would love to know i
 Browser support
 ---------------
 
-- Chrome 24
-- Firefox 18
+- Chrome 24+
+- Firefox 18+
+- Opera 20+
 - Safari 5.1.7
 - IE7+
 
@@ -38,8 +41,8 @@ How to use
 	<div id="simpleslider">
 		<div id="ss__wrapper">
 			<img src="img/image1.jpg" alt="An orange image" class="current"/>
-			<img src="img/image2.jpg" alt="A larger image with a different proportion to ss" />
-			<img src="img/image3.jpg" alt="A portrait image" />
+			<img src="img/image2.jpg" alt="A larger image with a different proportion to ss"/>
+			<img src="img/image3.jpg" alt="A portrait image"/>
 		</div>
 		<div id="ss__controls">
 			<div id="ss__prev"><div id="ss__prevChev"></div></div>
@@ -51,7 +54,7 @@ How to use
 
 2 - Link to `simpleslider.css` in the `<head>` tag:
 ```html
-	<link rel="stylesheet" type="text/css" href="simpleslider.css" />
+	<link rel="stylesheet" type="text/css" href="simpleslider.css"/>
 ```
 
 3 - Include `simpleslider.js` just before the `</body>` tag:
@@ -84,7 +87,7 @@ How to use
 
 2 - Link to `simpleslider.css` in the `<head>` tag:
 ```html
-	<link rel="stylesheet" type="text/css" href="simpleslider.css" />
+	<link rel="stylesheet" type="text/css" href="simpleslider.css"/>
 ```
 
 3 - Include `simpleslider.js` just before the `</body>` tag:
