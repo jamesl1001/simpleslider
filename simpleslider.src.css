@@ -20,7 +20,6 @@
 }
 
 #ss__wrapper img {
-    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -32,6 +31,14 @@
 #ss__wrapper img.current {
     filter: alpha(opacity=100);
     opacity: 1;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.full-height {
+    height: 100%;
 }
 
 #ss__controls {
