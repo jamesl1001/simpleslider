@@ -52,24 +52,26 @@ function simpleslider(ssR, ssF, ssD, ssP) {
     }
 
     for(var i = 0, l = ssImages.length; i < l; i++) {
-        if(window.addEventListener) {
-            ssImages[i].addEventListener('load', function() { ssImgLoaded(this) });
-        } else if(window.attachEvent) {
-            ssImages[i].attachEvent('onload', function() { ssImgLoaded(this) });
-        }
+        coverImages(ssImages[i]);
     }
 
-    function ssImgLoaded(imgElem) {
+    // Ensure each image fills the wrapper leaving no whitespace (background-size:cover)
+    function coverImages(imgElem) {
         var img = new Image();
         img.src = imgElem.src;
 
-        if(img.width < ssWidth) {
-            imgElem.className += ' full-width';
-        } else if(img.height < ssHeight) {
-            imgElem.className += ' full-height';
-        } else {
-            imgElem.className += ' full-width';
-        }
+        var wait = setInterval(function() {
+            if(img.width != 0 && img.height != 0) {
+                clearInterval(wait);
+                if(img.width < ssWidth) {
+                    imgElem.className += ' full-width';
+                } else if(img.height < ssHeight) {
+                    imgElem.className += ' full-height';
+                } else {
+                    imgElem.className += ' full-width';
+                }
+            }
+        }, 0);
     }
 
     // Add current class to first frame
