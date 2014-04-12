@@ -36,7 +36,7 @@ How to use
 
 **If you are comfortable adding images in HTML, you can use this method:**
 
-1 - Set up your markup and add your images! Any `<img>` tags you add within `<div id="ss__wrapper">` will become part of the slider.
+1 - Set up your markup and add your images. Any `<img>` tags you add within `<div id="ss__wrapper">` will become part of the slider.
 ```html
 	<div id="simpleslider">
 		<div id="ss__wrapper">
@@ -73,7 +73,7 @@ How to use
 
 **SimpleSlider can also load a set number of images from a specified directory, without having to specify them in the HTML:**
 
-1 - Set up your markup, the time leaving the `ss__wrapper` container empty:
+1 - Set up your markup, this time leaving the `ss__wrapper` container empty:
 ```html
 	<div id="simpleslider">
 		<div id="ss__wrapper"></div>
