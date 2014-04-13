@@ -18,7 +18,9 @@ function simpleslider(ssR, ssF, ssD, ssP) {
         ssDirectory     = ssD,
         ssPrefix        = ssP,
         ssCurrentFrame  = 0,
-        ssDotsWidth     = ssFrames * 15;
+        ssDotsWidth     = ssFrames * 15,
+        ssWidth         = 0,
+        ssHeight        = 0;
 
     // Calculate aspect ratio
     var ssRatioSplit      = ssRatio.split(':');
@@ -29,8 +31,12 @@ function simpleslider(ssR, ssF, ssD, ssP) {
     ssDots.style.width     = ssDotsWidth + 'px';
 
     // Get pixel dimensions
-    var ssWidth  = ssWrapper.offsetWidth;
-    var ssHeight = ssWrapper.offsetHeight;
+    function getSSDimensions() {
+        ssWidth  = ssWrapper.offsetWidth;
+        ssHeight = ssWrapper.offsetHeight;
+    }
+
+    getSSDimensions();
 
     // Generate navigation dots
     for(var i = 0; i < ssFrames; i++) {
@@ -72,16 +78,21 @@ function simpleslider(ssR, ssF, ssD, ssP) {
                     imgElem.className += ' full-height';
                 }
 
-                // Centre
-                if(imgElem.width >= ssWidth) {
-                    imgElem.style.left = (ssWidth - imgElem.width) / 2 + 'px';
-                }
-
-                if(imgElem.height >= ssHeight) {
-                    imgElem.style.top = (ssHeight - imgElem.height) / 2 + 'px';
-                }
+                calculateCentre();
             }
         }, 0);
+    }
+
+    function calculateCentre() {
+        for(var i = 0, l = ssImages.length; i < l; i++) {
+            if(ssImages[i].width >= ssWidth) {
+                ssImages[i].style.left = (ssWidth - ssImages[i].width) / 2 + 'px';
+            }
+
+            if(ssImages[i].height >= ssHeight) {
+                ssImages[i].style.top = (ssHeight - ssImages[i].height) / 2 + 'px';
+            }
+        }
     }
 
     // Add current class to first frame
@@ -114,8 +125,8 @@ function simpleslider(ssR, ssF, ssD, ssP) {
 
     // Next and Previous click handlers
     if(window.addEventListener) {
-        ssPrev.addEventListener('click', clickPrev, false);
-        ssNext.addEventListener('click', clickNext, false);
+        ssPrev.addEventListener('click', clickPrev);
+        ssNext.addEventListener('click', clickNext);
     } else if(window.attachEvent) {
         ssPrev.attachEvent('onclick', clickPrev);
         ssNext.attachEvent('onclick', clickNext);
@@ -136,7 +147,7 @@ function simpleslider(ssR, ssF, ssD, ssP) {
     // Navigation dots click handlers
     for(var i = 0; i < ssFrames; i++) {
         if(window.addEventListener) {
-            ssAllDots[i].addEventListener('click', clickDots, false);
+            ssAllDots[i].addEventListener('click', clickDots);
         } else if(window.attachEvent) {
             ssAllDots[i].attachEvent('onclick', clickDots);
         }
@@ -165,4 +176,16 @@ function simpleslider(ssR, ssF, ssD, ssP) {
                 break;
         }
     };
+
+    // Recalculate image centres on window resize
+    if(window.addEventListener) {
+        window.addEventListener('resize', windowResize);
+    } else if(window.attachEvent) {
+        window.attachEvent('onresize', windowResize);
+    }
+
+    function windowResize() {
+        getSSDimensions();
+        calculateCentre();
+    }
 }
