@@ -57,18 +57,28 @@ function simpleslider(ssR, ssF, ssD, ssP) {
 
     // Ensure each image fills the wrapper leaving no whitespace (background-size:cover)
     function coverImages(imgElem) {
+
         var img = new Image();
         img.src = imgElem.src;
 
         var wait = setInterval(function() {
             if(img.width != 0 && img.height != 0) {
                 clearInterval(wait);
-                if(img.width < ssWidth) {
+
+                // Stretch to fit
+                if((img.width / img.height) < (ssWidth / ssHeight)) {
                     imgElem.className += ' full-width';
-                } else if(img.height < ssHeight) {
-                    imgElem.className += ' full-height';
                 } else {
-                    imgElem.className += ' full-width';
+                    imgElem.className += ' full-height';
+                }
+
+                // Centre
+                if(imgElem.width >= ssWidth) {
+                    imgElem.style.left = (ssWidth - imgElem.width) / 2 + 'px';
+                }
+
+                if(imgElem.height >= ssHeight) {
+                    imgElem.style.top = (ssHeight - imgElem.height) / 2 + 'px';
                 }
             }
         }, 0);
