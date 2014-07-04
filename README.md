@@ -38,68 +38,68 @@ How to use
 
 1 - Set up your markup and add your images. Any `<img>` tags you add within `<div id="ss__wrapper">` will become part of the slider.
 ```html
-	<div id="simpleslider">
-		<div id="ss__wrapper">
-			<img src="img/image1.jpg" alt="An orange image" class="current"/>
-			<img src="img/image2.jpg" alt="A larger image with a different proportion to ss"/>
-			<img src="img/image3.jpg" alt="A portrait image"/>
-		</div>
-		<div id="ss__controls">
-			<div id="ss__prev"><div id="ss__prevChev"></div></div>
-			<div id="ss__next"><div id="ss__nextChev"></div></div>
-			<div id="ss__dots"></div>
-		</div>
+<div id="simpleslider">
+	<div id="ss__wrapper">
+		<img src="img/image1.jpg" alt="An orange image" class="current"/>
+		<img src="img/image2.jpg" alt="A larger image with a different proportion to ss"/>
+		<img src="img/image3.jpg" alt="A portrait image"/>
 	</div>
+	<div id="ss__controls">
+		<div id="ss__prev"><div id="ss__prevChev"></div></div>
+		<div id="ss__next"><div id="ss__nextChev"></div></div>
+		<div id="ss__dots"></div>
+	</div>
+</div>
 ```
 
 2 - Link to `simpleslider.css` in the `<head>` tag:
 ```html
-	<link rel="stylesheet" type="text/css" href="simpleslider.css"/>
+<link rel="stylesheet" type="text/css" href="simpleslider.css"/>
 ```
 
 3 - Include `simpleslider.js` just before the `</body>` tag:
 ```html
-    <script src="simpleslider.js"></script>
+<script src="simpleslider.js"></script>
 ```
 
 4 - SimpleSlider's dimensions are set using a width:height ratio. The width will always be 100% of its parent container.
 
 5 - Initiate SimpleSlider and pass through the width:height ratio as the parameter:
 ```html
-	<script>
-		simpleslider('16:9');
-	</script>
+<script>
+	simpleslider('16:9');
+</script>
 ```
 
 **SimpleSlider can also load a set number of images from a specified directory, without having to specify them in the HTML:**
 
 1 - Set up your markup, this time leaving the `ss__wrapper` container empty:
 ```html
-	<div id="simpleslider">
-		<div id="ss__wrapper"></div>
-		<div id="ss__controls">
-			<div id="ss__prev"><div id="ss__prevChev"></div></div>
-			<div id="ss__next"><div id="ss__nextChev"></div></div>
-			<div id="ss__dots"></div>
-		</div>
+<div id="simpleslider">
+	<div id="ss__wrapper"></div>
+	<div id="ss__controls">
+		<div id="ss__prev"><div id="ss__prevChev"></div></div>
+		<div id="ss__next"><div id="ss__nextChev"></div></div>
+		<div id="ss__dots"></div>
 	</div>
+</div>
 ```
 
 2 - Link to `simpleslider.css` in the `<head>` tag:
 ```html
-	<link rel="stylesheet" type="text/css" href="simpleslider.css"/>
+<link rel="stylesheet" type="text/css" href="simpleslider.css"/>
 ```
 
 3 - Include `simpleslider.js` just before the `</body>` tag:
 ```html
-    <script src="simpleslider.js"></script>
+<script src="simpleslider.js"></script>
 ```
 
 4 - SimpleSlider's dimensions are set using a width:height ratio. The width will always be 100% of its parent container.
 
 5 - Initiate SimpleSlider. Pass SimpleSlider the *width:height ratio*, *how many images* to load, the *directory* in which they belong and the filename prefix:
 ```html
-	<script>
-		simpleslider('16:9', 3, "img/directory", "prefix");
-	</script>
+<script>
+	simpleslider('16:9', 3, "img/directory", "prefix");
+</script>
 ```
