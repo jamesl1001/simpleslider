@@ -1,5 +1,5 @@
 /*
-  SimpleSlider v1.0 by JaL Productions
+  SimpleSlider v1.1 by JaL Productions
   http://jalproductions.co.uk/
   https://github.com/jamesl1001/simpleslider
 */
@@ -161,7 +161,7 @@ function simpleslider(ssR, ssF, ssD, ssP) {
         }
         var n = dotClicked.match(/\d/);
         clearCurrent();
-        goToFrame(n[0]);
+        goToFrame(parseInt(n[0]));
         addCurrent(n[0]);
     }
 
