@@ -1,5 +1,5 @@
 /*
-  SimpleSlider v0.9 by JaL Productions
+  SimpleSlider v1.0 by JaL Productions
   http://jalproductions.co.uk/
   https://github.com/jamesl1001/simpleslider
 */
@@ -104,16 +104,17 @@
 
 #ss__dots {
     width: 100%;
-    height: 5px;
+    height: 10px;
     margin: 0 auto;
     padding: 10px 0;
     clear: both;
 }
 
 .ss__dot {
-    width: 5px;
-    height: 5px;
+    width: 10px;
+    height: 10px;
     background: #CCC;
+    border-radius: 50%;
     margin: 0 5px;
     float: left;
     cursor: pointer;

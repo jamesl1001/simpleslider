@@ -1,5 +1,5 @@
 /*
-  SimpleSlider v0.9 by JaL Productions
+  SimpleSlider v1.0 by JaL Productions
   http://jalproductions.co.uk/
   https://github.com/jamesl1001/simpleslider
 */
@@ -18,7 +18,7 @@ function simpleslider(ssR, ssF, ssD, ssP) {
         ssDirectory     = ssD,
         ssPrefix        = ssP,
         ssCurrentFrame  = 0,
-        ssDotsWidth     = ssFrames * 15,
+        ssDotsWidth     = ssFrames * 20,
         ssWidth         = 0,
         ssHeight        = 0;
 
