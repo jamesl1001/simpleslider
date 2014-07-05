@@ -1,4 +1,4 @@
-SimpleSlider v1.1
+SimpleSlider v1.2
 =================
 http://jalproductions.co.uk/projects/SimpleSlider/
 
